@@ -9,7 +9,10 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons' 
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import VueProgress from 'vue-progress'
+
+Vue.use(VueProgress)
 
 library.add(faEnvelope)
 library.add(faFacebook)
@@ -18,6 +21,7 @@ library.add(faGithub)
 library.add(faLinkedin)
 
 Vue.config.productionTip = false
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueSimpleMarkdown)
