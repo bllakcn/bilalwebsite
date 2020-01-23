@@ -1,7 +1,7 @@
 <template>
   <div id="about" class="mx-auto my-auto">
     <div class="block justify-center mx-auto md:flex xl:px-10">
-      <img src="../assets/A.BilalAkcan.jpg" class="my-auto mx-auto w-2/6 rounded-full mx-10 md:w-1/4 lg:w-2/12 h-full">
+      <img src="../assets/A.BilalAkcan.jpeg" class="photo shadow my-auto mx-auto rounded-full mx-10 md:w-1/4 lg:w-2/12">
       <p class="py-10 md:px-10 font-libre">
         Hi, I am Bilal. <br><br>
         Currently pursuing Architecture Bachelor's degree at Budapest University of Technology and Economics and practicing UI design and development skills in free times.<br><br>
@@ -20,5 +20,12 @@ export default {
 </script>
 
 <style scoped>
-
+  .photo{
+    filter: grayscale(1);
+    transition: filter 1s
+  }
+  .photo:hover{
+    filter: grayscale(.3);
+    
+  }
 </style>
