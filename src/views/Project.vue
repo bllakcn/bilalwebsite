@@ -2,7 +2,7 @@
   <div id="project">
     <div v-for="record in records" :key="record">
       <div v-if="record.fields.slug == $route.params.slug">
-        <div class="text-center">
+        <div class="select-none text-center">
           <h1 class="font-pop text-lg">{{record.fields.title}}</h1>
           <h2 class="tracking-widest text-gray-700 font-libre text-xs">{{record.fields.date}}</h2>
         </div>
@@ -62,7 +62,7 @@ import axios from 'axios'
 </script>
 
 <style scoped>
-.font-libri{
-  font-family: Libre Franklin
-}
+  .font-libri{
+    font-family: Libre Franklin
+  }
 </style>

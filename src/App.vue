@@ -6,9 +6,11 @@
       <app-navbar></app-navbar>
     </div>
     <div>
-      <keep-alive>
-        <router-view class="p-5 py-10 md:p-16"></router-view>
-      </keep-alive>
+      <transition name="component-fade" mode="out-in">
+        <keep-alive>
+          <router-view class="p-5 py-10 md:p-16"></router-view>
+        </keep-alive>
+      </transition>
       <app-contact></app-contact>
     </div>
   </div>
@@ -32,5 +34,10 @@ export default {
 </script>
 
 <style>
-
+  .component-fade-enter-active, .component-fade-leave-active{
+    transition: opacity .2s ease;
+  }
+  .component-fade-enter, .component-fade-leave-to{
+    opacity: 0;
+  }
 </style>
