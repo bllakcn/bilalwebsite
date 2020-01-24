@@ -2,7 +2,7 @@
   <div id="projects">
     <div class="mx-auto flex flex-wrap justify-center overflow-hidden">
       <div v-for="record in records" :key="record">
-        <router-link :to="'/portfolio/' + record.fields.slug">
+        <router-link  :to="'/portfolio/' + record.fields.slug">
           <div class="bwcss w-64 lg:w-auto rounded-lg shadow border hover:shadow-inner m-5 overflow-auto bg-white select-none">
             <img :src="record.fields.image[0].url" class="h-40 lg:h-56 object-cover p-4">
             <h1 class="pl-4 pb-1 font-chivo text-lg">{{record.fields.title}}</h1>
@@ -10,7 +10,6 @@
           </div>
         </router-link>
       </div>
-        <router-view></router-view>
     </div> 
   </div>
 </template>
@@ -24,7 +23,7 @@ import axios from 'axios'
         apiKey: 'keypShAsE2JBGmmi3',
         base: 'appWKUisC0lo7L42m/Architectural%20Projects',
         records: [],
-        loading: true
+        loading: true,
       }
     },
     methods: {
@@ -42,7 +41,6 @@ import axios from 'axios'
     },
     mounted () {
       this.getData();
-      console.log(this.records)
     },
   }
 

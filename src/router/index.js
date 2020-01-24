@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import About from '../views/About.vue'
-//import Portfolio from '../views/Portfolio.vue'
 import Project from '../views/Project.vue'
 import Projects from '../views/Projects.vue'
 import Skills from '../views/Skills.vue'
@@ -18,14 +17,6 @@ const routes = [
     path: '/portfolio',
     name: 'portfolio',
     component: Projects,
-    /*children:[
-      {
-        path: '',
-        name: 'projects',
-        component: Projects
-      },
-  
-    ]*/
   },
   {
     path: '/skills',

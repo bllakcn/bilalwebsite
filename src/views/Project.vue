@@ -1,5 +1,15 @@
 <template>
   <div id="project">
+    <router-link v-on:click="chooseNext" :to="'/portfolio/' + prevelement">
+      <div class="hidden lg:block fixed opacity-25 text-center inset-y-0 pr-5 py-64 pl-6 left-0 hover:opacity-75">
+        <font-awesome-icon class="text-4xl" :icon="['fas', 'angle-left']"/>
+      </div>
+    </router-link>
+    <router-link v-on:click="chooseNext" :to="'/portfolio/' + nxtelement">
+      <div class="hidden lg:block fixed opacity-25 text-center inset-y-0 pr-5 py-64 pl-6 right-0 hover:opacity-75">
+        <font-awesome-icon class="text-4xl" :icon="['fas', 'angle-right']"/>
+      </div>
+    </router-link>
     <div v-for="record in records" :key="record">
       <div v-if="record.fields.slug == $route.params.slug">
         <div class="select-none text-center">
@@ -38,7 +48,9 @@ import axios from 'axios'
         apiKey: 'keypShAsE2JBGmmi3',
         base: 'appWKUisC0lo7L42m/Architectural%20Projects',
         records: [],
-        loading: true
+        loading: true,
+        nxtelement: null,
+        prevelement: null,
       }
     },
      methods: {
@@ -52,12 +64,34 @@ import axios from 'axios'
         this.records = res.data.records
         setTimeout(() => {this.loading = false},500)
           })
-      }
+      },
+      chooseNext(){
+        for (let i = 0; i < this.records.length; i++) {
+          if(this.records[i].fields.slug == this.$route.params.slug){
+            if( i+1 == this.records.length){
+              this.nxtelement = this.records[i].fields.slug;
+            }
+            else{
+              this.nxtelement = this.records[i + 1].fields.slug;
+            }
+            if(i == 0){
+              this.prevelement = this.records[i].fields.slug;
+            }
+            else{
+              this.prevelement = this.records[i - 1].fields.slug;
+            }
+          }
+        }
+        console.log(this.prevelement)
+        console.log(this.nxtelement)
+      },
     },
     created () {
       this.getData();
-      console.log(this.records)
     },
+    beforeUpdate(){
+      this.chooseNext();
+    }
   }
 </script>
 

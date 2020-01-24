@@ -10,10 +10,14 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import VueProgress from 'vue-progress'
 
 Vue.use(VueProgress)
 
+library.add(faAngleLeft)
+library.add(faAngleRight)
 library.add(faEnvelope)
 library.add(faFacebook)
 library.add(faInstagram)
