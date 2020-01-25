@@ -1,9 +1,10 @@
 <template>
   <div id="app" class="min-h-screen">
     <div id="nav">
-      <img v-on:click="currentTab = 'About'" src="./assets/logos.png" class="max-w-lg w-6/12 h-auto hidden md:block mx-auto p-10 select-none">
-      <h1 class="block md:hidden font-pop text-center text-2xl p-5">Ahmet Bilal Akcan</h1>
-      <app-navbar></app-navbar>
+      <img v-on:click="currentTab = 'About'" src="./assets/logos.png" class="max-w-lg w-6/12 h-auto hidden md:block mx-auto p-10 pb-1 select-none">
+      <h1 class="block md:hidden select-none font-pop text-center text-2xl p-5">Ahmet Bilal Akcan</h1>
+      <h1 class="hidden md:block font-pop opacity-25 text-center select-none border-b w-8/12 xl:w-6/12 mx-auto bd text-xs lg:text-sm"><span class="text-4xl">"</span>Full-time architecture student. Part-time coding & photography enthusiast.<span class="text-4xl">"</span></h1>
+      <app-navbar class="pt-5"></app-navbar>
     </div>
     <transition name="component-fade" mode="out-in">
       <keep-alive>
@@ -40,5 +41,13 @@ export default {
   }
   .component-fade-enter, .component-fade-leave-to{
     opacity: 0;
+  }
+  .bd{
+    transition: border .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
+  }
+  .bd:hover{
+    border-bottom: solid rgb(111, 111, 111) 1px;
+    opacity: 1 ;
   }
 </style>
