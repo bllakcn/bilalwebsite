@@ -82,8 +82,6 @@ import axios from 'axios'
             }
           }
         }
-        console.log(this.prevelement)
-        console.log(this.nxtelement)
       },
     },
     created () {
