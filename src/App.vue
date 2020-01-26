@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="min-h-screen">
+  <div id="app" class="">
     <div id="nav">
       <img v-on:click="currentTab = 'About'" src="./assets/logos.png" class="max-w-lg w-6/12 h-auto hidden md:block mx-auto p-10 pb-1 select-none">
       <h1 class="block md:hidden select-none font-pop text-center text-2xl p-5">Ahmet Bilal Akcan</h1>
@@ -8,7 +8,7 @@
     </div>
     <transition name="component-fade" mode="out-in">
       <keep-alive>
-        <router-view class="p-5 py-10 md:p-16"></router-view>
+        <router-view class="justify-center p-5 py-10 md:p-16"></router-view>
       </keep-alive>
     </transition>
     <app-contact></app-contact>
