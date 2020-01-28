@@ -18,7 +18,7 @@
         </div>
         <div class="py-10 px-3 md:px-10">
           <h1 class="font-chivo text-center pb-8 text-lg">Description</h1>
-          <vue-simple-markdown class="font-libri pb-8" :source="record.fields.body"></vue-simple-markdown>
+          <vue-simple-markdown class="font-libri pb-8 text-justify" :source="record.fields.body"></vue-simple-markdown>
           <h1 class="font-chivo text-center pb-8 text-lg ">Posters</h1>
           <div class="hidden lg:block w-3/5 mx-auto border rounded-lg p-5 text-center">
             <div v-for="poster in record.fields.posters" :key="poster" class="inline-block px-1">

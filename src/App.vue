@@ -8,7 +8,7 @@
     </div>
     <transition name="component-fade" mode="out-in">
       <keep-alive>
-        <router-view class="justify-center p-5 py-10 md:p-16"></router-view>
+        <router-view class="p-5 py-10 md:p-16"></router-view>
       </keep-alive>
     </transition>
     <app-contact></app-contact>

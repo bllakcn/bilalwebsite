@@ -53,8 +53,8 @@
           {name: 'Adobe Illustrator', progress: 'width: 68%'},
         ],
         fronts:[
-          {name: 'Javascript & Vue', progress: 'width: 75%'},
-          {name: 'Html & Css', progress: 'width: 70%'},
+          {name: 'Javascript & Vue', progress: 'width: 78%'},
+          {name: 'Html & Css', progress: 'width: 72%'},
           {name: 'Google Script', progress: 'width: 55%'},
         ]
       }
