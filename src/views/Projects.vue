@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="mb-10">
-    <div class="block p-5 mb-5 border rounded-lg">
+    <div v-if="loading" class="block p-5 mb-5 border rounded-lg">
       <h1 class="pb-4 px-5 font-pop">&bull; Projects</h1>
       <div class="block md:flex">
         <div v-for="record in records" :key="record" class="pb-10 md:px-5">
@@ -42,7 +42,7 @@ import axios from 'axios'
         apiKey: 'keypShAsE2JBGmmi3',
         base: 'appWKUisC0lo7L42m/Architectural%20Projects',
         records: [],
-        loading: true,
+        loading: false,
       }
     },
     methods: {
@@ -54,7 +54,7 @@ import axios from 'axios'
           }
         }).then((res) => {
         this.records = res.data.records
-        setTimeout(() => {this.loading = false},500)
+        setTimeout(() => {this.loading = true},500)
           })
       },
     },
