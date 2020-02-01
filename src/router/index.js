@@ -30,7 +30,7 @@ const routes = [
     component: Project
   },
   {
-    path: '/blog',
+    path: '/notepad',
     name: 'blog',
     component: Blogs
   }

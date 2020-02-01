@@ -9,7 +9,7 @@
     <router-link to="/portfolio">
       <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Portfolio</h1>
     </router-link>
-    <router-link to="/blog">
+    <router-link to="/notepad">
       <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Notepad</h1>
     </router-link>
   </div>
