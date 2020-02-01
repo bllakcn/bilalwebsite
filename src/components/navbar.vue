@@ -3,11 +3,14 @@
     <router-link to="/">
       <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">About</h1>
     </router-link>
+    <router-link to="/skills">
+      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Skills</h1>
+    </router-link>
     <router-link to="/portfolio">
       <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Portfolio</h1>
     </router-link>
-    <router-link to="/skills">
-      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Skills</h1>
+    <router-link to="/blog">
+      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Notepad</h1>
     </router-link>
   </div>
 </template>
