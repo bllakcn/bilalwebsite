@@ -1,14 +1,15 @@
 <template>
   <div id="app" class="">
-    <div id="nav">
+    <div id="nav" class="mx-auto">
       <img v-on:click="currentTab = 'About'" src="./assets/logos.png" class="max-w-lg w-6/12 h-auto hidden md:block mx-auto p-10 pb-1 select-none">
-      <h1 class="block md:hidden select-none font-pop text-center text-2xl p-5">Ahmet Bilal Akcan</h1>
+      <h1 class="block md:hidden p-3 text-center font-pop text-3xl">Ahmet Bilal Akcan</h1>
+      <app-navbar class="pb-3"></app-navbar>
+      <div class="h-px block md:hidden mx-6 opacity-25 bg-black"></div>
       <h1 class="hidden md:block font-pop opacity-25 text-center select-none border-b w-8/12 xl:w-6/12 mx-auto bd text-xs lg:text-sm"><span class="text-4xl">"</span>Full-time architecture student. Part-time coding & photography enthusiast.<span class="text-4xl">"</span></h1>
-      <app-navbar></app-navbar>
     </div>
     <transition name="component-fade" mode="out-in">
       <keep-alive>
-        <router-view class="p-5 py-10 md:p-16"></router-view>
+        <router-view class="p-5 py-6 md:p-16"></router-view>
       </keep-alive>
     </transition>
     <app-contact></app-contact>
