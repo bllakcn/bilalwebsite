@@ -1,23 +1,25 @@
 <template>
-  <div id="navbar" class="flex mx-auto justify-center text-center w-48 font-chivo tracking-wider select-none">
-    <router-link to="/">
-      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">About</h1>
-    </router-link>
-    <router-link to="/skills">
-      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Skills</h1>
-    </router-link>
-    <router-link to="/portfolio">
-      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Portfolio</h1>
-    </router-link>
-    <router-link to="/notepad">
-      <h1 class="flex-1 max-w-lg px-10 hover:shadow-inner rounded-lg">Notepad</h1>
-    </router-link>
+  <div id="navbar" class="flex justify-center mt-1 overflow-auto mx-auto">
+    <div v-for="menu in menus" :key="menu">
+      <router-link :to="menu.to">
+        <h1 class="py-1 px-4 sm:px-8 lg:px-12 hover:shadow-inner rounded-lg">{{menu.name}}</h1>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    
+    data() {
+      return {
+        menus:[
+          {name:"About",to:"/"},
+          {name:"Skills",to:"/skills"},
+          {name:"Portfolio",to:"/portfolio"},
+          {name:"Notepad",to:"/notepad"}
+        ]
+      }
+    },
   }
 </script>
 

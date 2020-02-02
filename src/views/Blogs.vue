@@ -10,7 +10,7 @@
             <h1 style="fontSize: 10px" class="font-libri ml-16 text-gray-500">{{blog.fields.Date}}</h1>
           </div>
           <div class="mx-auto w-full lg:w-2/6 rounded-lg overflow-auto">
-            <div class="h-40 bg-fill bg-center bg-no-repeat lg:border" :style="{ backgroundImage: 'url('+blog.fields.thumbnail+')' }"></div>
+            <div class="h-40 bwcss bg-fill bg-center bg-no-repeat lg:border" :style="{ backgroundImage: 'url('+blog.fields.thumbnail+')' }"></div>
           </div>
         </a>
       </div>
@@ -50,5 +50,14 @@ import axios from 'axios'
 </script>
 
 <style scoped>
-
+  .bwcss{
+    transition: filter .6s;
+    transition: opacity .3s;
+    filter: grayscale(60%);
+    opacity: .8;
+  }
+  .bwcss:hover{
+    filter: grayscale(0);
+    opacity: 1;
+  }
 </style>
