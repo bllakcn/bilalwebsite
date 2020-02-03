@@ -25,7 +25,7 @@ import axios from 'axios'
       return {
         apiUrl: 'https://api.airtable.com/v0/',
         apiKey: 'keypShAsE2JBGmmi3',
-        base: 'appCTYfhQLMx380OA/Table%201',
+        base: 'appCTYfhQLMx380OA/Table%201?sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc',
         blogs: [],
         loading: false,
       }
