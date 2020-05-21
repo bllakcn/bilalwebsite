@@ -19,7 +19,7 @@
           {name:"Notepad",to:"/notepad"}
         ]
       }
-    },
+    }
   }
 </script>
 

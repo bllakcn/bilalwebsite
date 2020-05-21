@@ -9,6 +9,9 @@
     <a href="https://www.facebook.com/ahmetbilal.akcan" target="_blank">
       <font-awesome-icon class="mx-4 hover:text-gray-700" :icon="['fab', 'facebook']"/>
     </a>
+    <a href="https://open.spotify.com/user/11155167101?si=LdOoueMjQna9VRap_PZnqQ" target="_blank">
+      <font-awesome-icon class="mx-4 hover:text-gray-700" :icon="['fab', 'spotify']"/>
+    </a>
     <a href="https://github.com/bllakcn" target="_blank">
       <font-awesome-icon class="mx-4 hover:text-gray-700" :icon="['fab', 'github']"/>
     </a>
