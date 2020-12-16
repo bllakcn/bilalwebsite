@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="block p-5 border rounded-lg">
+    <div v-if="loading" class="block p-5 border rounded-lg">
       <h1 class="pb-4 px-5 font-pop">&bull; Visualizations</h1>
       <div class="block md:flex md:flex-wrap">
         <div v-for="record in records" :key="record" class="pb-10 md:p-5 w-6/12">
