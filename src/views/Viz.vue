@@ -6,7 +6,7 @@
         <div v-for="record in records" :key="record" class="pb-10 md:p-5 w-6/12">
           <div class="bfcss">
             <img :src="record.fields.image[0].url" alt="">
-            <a :href="record.fields.link">
+            <a :href="record.fields.link" target="_blank">
               <h2 class="pl-4 pb-1 mb-5 font-libre tracking-widest text-gray-700 text-xs">{{record.fields.date}}</h2>
             </a>
           </div>
